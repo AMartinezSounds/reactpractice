@@ -9,6 +9,7 @@ const CreateTweet = () => {
     const submitTweetHandler = (e) => {
         e.preventDefault();
         setTweets([...tweets, textInput])
+        setTextInput('');
     }
     return (
         <form onSubmit={submitTweetHandler}>
