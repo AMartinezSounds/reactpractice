@@ -4,13 +4,15 @@ import TweetList from './components/TweetList';
 import CreateTweet from './components/createTweet';
 
 function App() {
+  const [textInput, setTextInput] = useState("");
+    const [tweets, setTweets] = useState([]);
   const [name, setName] = useState("Alfredo Martinez")
-  let message = "I think optical compressors sounds more musical than FET compressors";
+  
   
   return (
     <div>
-      <CreateTweet/>
-      <TweetList setName={setName} name={name} message={message}/>
+      <CreateTweet textInput={textInput} setTextInput={setTextInput} tweets={tweets} setTweets={setTweets}/>
+      <TweetList setName={setName} name={name} tweets={tweets} setTweets={setTweets}/>
     </div>
   );
 }
