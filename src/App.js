@@ -1,5 +1,6 @@
 import './App.css';
 import Tweet from './components/tweet';
+import TweetList from './components/TweetList';
 import CreateTweet from './components/createTweet';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div>
       <h1>Hello {name}</h1>
       <CreateTweet/>
-      <Tweet name={name} message={message}/>
+      <TweetList name={name} message={message}/>
     </div>
   );
 }
